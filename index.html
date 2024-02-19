@@ -17,6 +17,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e48728907e.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <!-- Header Section -->
@@ -47,7 +50,7 @@
                   </ul>
                 </div>
                 <div class="navbar-end">
-                  <a class="btn text-[#1DD100] bg-[#1cd10019] border-[#1DD100] ">Bus <img src="images/bus-icon.png"></a>
+                  <a href="#ticket" class="btn text-[#1DD100] bg-[#1cd10019] border-[#1DD100] ">Bus <img src="images/bus-icon.png"></a>
                 </div>
               </div>
         </nav>
@@ -61,7 +64,7 @@
                     <h1 class="mb-7 text-5xl font-bold text-[#ffffff]">End-to-End Travel with</h1>
                     <h2 class="mb-7 text-5xl font-extrabold text-[#61ff49]">Poche Debo</h2>
                     <p class="mb-7">Efficient and reliable bus service website offering seamless booking, real-time tracking, and user-friendly navigation for a convenient and comfortable travel experience. Book your journey today!</p>
-                    <button class="btn text-[black] bg-[#1DD100] border-[#1DD100] mb-16">Buy Tickets</button>
+                    <a href="#ticket"><button class="btn text-[black] bg-[#1DD100] border-[#1DD100] mb-16">Buy Tickets</button></a>
                   </div>
                 </div>
               </div>
@@ -142,7 +145,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section  id="ticket">
         <div class="border_round bg-[#F7F8F8] border-t-[#1DD100] border-t-4  mt-12">
           <div class="lg:mx-32 mx-5 text-center mt-14 mb-11">
             <h1 class=" text-5xl font-extrabold mb-7">Gontoby Paribahan</h1>
@@ -160,7 +163,7 @@
                 </div>
                 <div class="flex gap-3 items-center text-[#1DD100] bg-[#1cd10019] border-[#1DD100] rounded-xl p-3 ">
                   <img src="images/seat-green.png" alt="">
-                  <h1>40 Seats</h1>
+                  <h1 id="totalSeat">20 Seats</h1>
                 </div>              
                 </div>
                 <div class="bg-[#f0f3f3] p-10 mt-10 rounded-xl">
@@ -204,12 +207,12 @@
              <div class="col-span-4 p-24">
  
                 <!-- seat booking Heading  -->
-                <h2>Select Your Seat</h2>    
-                 <div class="flex justify-between border-t-2 border-b-2 mb-12">
+                <h2 class="text-3xl font-medium mb-4">Select Your Seat</h2>    
+                 <div class="flex justify-between border-t-2 border-b-2 mb-12 ">
  
                    <div class="flex items-center py-4">
-                   <img src="./images/seat-gray.png" class="mr-1" />
-                   Available
+                   <img src="./images/seat-gray.png" class="mr-1 " />
+                   <h1 class="text-[#a4a4a4db]"> Available</h1>
                    </div>
  
                    <div class="flex items-center py-4">
@@ -217,11 +220,15 @@
                    Selected
                    </div>
                  </div>
-                
- 
+
+                <!-- Driving -->
+                 <div class="flex justify-end mb-4">
+                  <button class="btn  w-1/6 text-3xl"><i class="fa-solid fa-dharmachakra"></i></button>
+                 </div>
                 <!-- seat container  -->
                <div class="">
- 
+                
+
                <!-- seat row -->
                <div class="mb-2 flex  items-center">
                  <p class="mr-2">A</p>
@@ -291,6 +298,23 @@
  
                  </div>
                </div>
+
+               <!-- seat row -->
+               <div class="mb-2 flex  items-center">
+                <p class="mr-2">E</p>
+                <div class="grid grid-cols-4 gap-12 w-full">
+                  <div class="col-span-2 flex gap-2">
+                  <button onClick="HandleSeat('E1')" id="E1" class="btn  w-1/2">E1</button>
+                  <button onClick="HandleSeat('E2')" id="E2" class="btn  w-1/2">E2</button>
+                  </div>
+
+                  <div class="col-span-2 flex gap-2">
+                    <button onClick="HandleSeat('E3')" id="E3" class="btn  w-1/2">E3</button>
+                    <button onClick="HandleSeat('E4')" id="E4" class="btn  w-1/2">E4</button>
+                  </div>
+
+                </div>
+              </div>
  
                 
                </div>
@@ -300,12 +324,12 @@
  
             <!-- Seat Calculation right -->
             <div class="col-span-2">
-             <h1 class="border-b-2 mb-8">Select Your Seat</h1>
+             <h1 class="border-b-2 mb-10 text-3xl">Select Your Seat</h1>
              <div class="bg-[#F7F8F8] rounded-lg">
                <table class="table">
                  <thead>
                    <tr class="text-center">
-                     <th class="text-xl 	">Seat <span id="Seatquantity"></span></th>
+                     <th class="text-xl 	">Seat <span id="seatquantity" class="text-[#1DD100] text-base"></span></th>
                      <th class="text-xl 	">Class</th>
                      <th class="text-xl 	">Price</th>
                    </tr>
@@ -334,7 +358,7 @@
              </div> 
               
              
-          <a href="./Cheackout.html"> <button class="btn " >Next</button></a>
+          <a href="./Cheackout.html"> <button class="btn w-full mt-7 text-2xl font-semibold text-[#FFFFFF] bg-[#1DD100] border-[#1DD100]" >Next</button></a>
             </div>
            </div>
         </div>

@@ -1,7 +1,7 @@
 let totalPrice=0;
 let Grandtotal=0;
 let totalQuantity=0;
-let totalSeat=40;
+let totalSeat=20;
 
 function HandleSeat(id){
     // console.log(id)
@@ -36,7 +36,7 @@ function HandleSeat(id){
     document.getElementById('total').innerText=`BDT ${totalPrice} `
     document.getElementById('grandTotal').innerText=`BDT ${Grandtotal} `
     document.getElementById('totalSeat').innerText=`${totalSeat} Seat`
-    document.getElementById('Seatquantity').innerText=`${totalQuantity}`
+    document.getElementById('seatquantity').innerText=`${totalQuantity}`
 
 }
 function handleCopupon(){
